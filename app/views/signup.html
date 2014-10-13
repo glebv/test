@@ -1,0 +1,23 @@
+<div class="bgLogin">
+    <div class="userDialogWrapper">
+        <form role="form" class="signUp" id="signUp" ng-submit="state.is('updateUser') ? update() : signup()">
+            <a href="#" class="addPicture"><img src="../../images/user.png" class="signupImg"></a>
+            <!--<img src="images/userSignupCamera.png" class="signupImg"> add this when loading-->
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="userData.name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="userData.email"
+                        ng-disabled="state.is('updateUser')">
+            </div>
+            <div class="form-group">
+                <input type="code" class="form-control" id="inputCode" placeholder="Code" ng-model="userData.code">
+            </div>
+            <button type="submit" class="signUp">Sign Up</button>
+        </form>
+        <div class="termsPrivacy">
+            By creating an account you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </div>
+        <a ui-sref="home" class="back">Back</a>
+    </div>
+</div>
